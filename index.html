@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" id="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agente Raíz - Impulsa tus Ventas Inmobiliarias</title>
-    <meta name="description" content="La plataforma inteligente diseñada para el mercado inmobiliario de México. Maximiza tu cartera y convierte más leads.">
+    <title>Agente Raíz - Plataforma AI Todo-en-Uno para Brokers e Inmobiliarias</title>
+    <meta name="description" content="La única plataforma que combina videos UGC, virtual staging, object removal y AI avatars para brokers e inmobiliarias en México. Ahorra 80% del tiempo y aumenta ventas 300%.">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -73,6 +73,85 @@
             font-weight: bold;
             box-shadow: 0 4px 15px rgba(132, 204, 22, 0.4);
         }
+
+        .video-preview {
+            position: relative;
+            background: linear-gradient(45deg, #f0f9ff, #e0f2fe);
+            border: 2px dashed #0284c7;
+            border-radius: 12px;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .play-button {
+            width: 60px;
+            height: 60px;
+            background: #0284c7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .play-button:hover {
+            background: #0369a1;
+            transform: scale(1.1);
+        }
+
+        .language-toggle {
+            position: relative;
+            display: inline-flex;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 2px;
+        }
+
+        .language-option {
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .language-option.active {
+            background: white;
+            color: #1e40af;
+            font-weight: 600;
+        }
+
+        .roi-badge {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .competitive-advantage {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .broker-targeting {
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 8px 4px;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -85,18 +164,29 @@
                     <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
                         <span class="text-white font-bold text-xl">🏠</span>
                     </div>
-                    <h1 class="text-2xl font-bold text-gray-900">Agente Raíz</h1>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-900">Agente Raíz</h1>
+                        <span class="text-xs text-gray-500 font-medium">AI Todo-en-Uno para Brokers</span>
+                    </div>
                 </div>
 
-                <!-- WhatsApp CTA -->
-                <a href="https://wa.me/525512345678?text=Hola,%20quiero%20saber%20más%20sobre%20Agente%20Raíz%20para%20mi%20agencia%20inmobiliaria"
-                   target="_blank"
-                   class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 transition-all duration-300 whatsapp-pulse">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.382"/>
-                    </svg>
-                    Contáctanos en WhatsApp
-                </a>
+                <div class="flex items-center gap-4">
+                    <!-- Language Toggle -->
+                    <div class="language-toggle">
+                        <div class="language-option active" data-lang="es">ES</div>
+                        <div class="language-option" data-lang="en">EN</div>
+                    </div>
+
+                    <!-- WhatsApp CTA -->
+                    <a href="https://wa.me/525512345678?text=Hola,%20soy%20broker/manager%20y%20quiero%20conocer%20Agente%20Raíz%20para%20mi%20inmobiliaria"
+                       target="_blank"
+                       class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 transition-all duration-300 whatsapp-pulse">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.382"/>
+                        </svg>
+                        <span data-text="contact-whatsapp">Contáctanos en WhatsApp</span>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -105,30 +195,190 @@
     <section class="gradient-bg text-white py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
+                <!-- Target Audience Badges -->
+                <div class="flex flex-wrap justify-center gap-3 mb-8">
+                    <div class="broker-targeting">
+                        🏢 <span data-text="target-brokers">Brokers</span>
+                    </div>
+                    <div class="broker-targeting">
+                        👥 <span data-text="target-managers">Managers</span>
+                    </div>
+                    <div class="broker-targeting">
+                        🏛️ <span data-text="target-agencies">Inmobiliarias</span>
+                    </div>
+                </div>
+
                 <h2 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                    Impulsa tus Ventas.<br>
-                    <span class="text-lime-300">Maximiza tu Cartera.</span><br>
+                    <span data-text="hero-title-1">Impulsa tus Ventas.</span><br>
+                    <span class="text-lime-300" data-text="hero-title-2">Maximiza tu Cartera.</span><br>
                     Agente Raíz.
                 </h2>
+
+                <!-- ROI Highlight -->
+                <div class="flex justify-center gap-4 mb-6">
+                    <span class="roi-badge" data-text="roi-time">Ahorra 80% Tiempo</span>
+                    <span class="roi-badge" data-text="roi-sales">+300% Ventas</span>
+                    <span class="roi-badge" data-text="roi-cost">-70% Costos</span>
+                </div>
+
                 <p class="text-xl md:text-2xl mb-10 text-blue-100 max-w-3xl mx-auto leading-relaxed">
-                    La plataforma inteligente diseñada para el mercado inmobiliario de México.
+                    <span data-text="hero-subtitle">La única plataforma TODO-EN-UNO que combina videos UGC, virtual staging, object removal y AI avatars. Diseñada específicamente para brokers e inmobiliarias en México.</span>
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="#contacto"
                        class="bg-lime-500 hover:bg-lime-400 text-gray-900 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105">
-                        Solicitar Demo Gratis
+                        <span data-text="cta-demo">Demo Gratuito para Brokers</span>
                     </a>
-                    <a href="https://wa.me/525512345678?text=Hola,%20quiero%20una%20cotización%20personalizada%20para%20mi%20agencia"
+                    <a href="https://wa.me/525512345678?text=Hola,%20soy%20broker/manager.%20Quiero%20ver%20cómo%20Agente%20Raíz%20puede%20aumentar%20mis%20ventas%20300%25"
                        target="_blank"
                        class="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300">
-                        Cotización Personalizada
+                        <span data-text="cta-pricing">Ver Precios Especiales</span>
                     </a>
+                </div>
+
+                <!-- Competitive Advantage -->
+                <div class="mt-8">
+                    <p class="text-sm text-blue-200 mb-2" data-text="competitive-note">Vs competencia internacional:</p>
+                    <div class="flex justify-center gap-3">
+                        <span class="competitive-advantage">Arcads: $99/mes → Nosotros: $49/mes</span>
+                        <span class="competitive-advantage">En Español nativo</span>
+                        <span class="competitive-advantage">Soporte México 24/7</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Feature Section 1 - Intelligent Communication -->
+    <!-- Feature Section 1 - UGC Video Creation -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                    🎬 <span data-text="feature-ugc-badge">Videos UGC en 2 Minutos</span>
+                </div>
+                <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <span data-text="ugc-title">Crea Videos UGC Profesionales</span>
+                </h3>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    <span data-text="ugc-subtitle">Genera videos con actores AI reales mostrando propiedades, testimoniales de clientes, y tours virtuales. Sin contratar videógrafos, sin sets de grabación.</span>
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- UGC Video Demo -->
+                <div class="lg:col-span-2">
+                    <div class="video-preview">
+                        <div class="text-center">
+                            <div class="play-button mb-4">
+                                <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                            <p class="text-gray-600 font-medium" data-text="video-demo">Ver Demo: Agente AI mostrando casa en Polanco</p>
+                            <p class="text-sm text-gray-500 mt-2" data-text="video-time">Generado en 90 segundos</p>
+                        </div>
+                    </div>
+
+                    <!-- UGC Features Grid -->
+                    <div class="grid md:grid-cols-2 gap-4 mt-8">
+                        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
+                            <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
+                                👥
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-2" data-text="feature-actors">100+ Actores AI Mexicanos</h4>
+                            <p class="text-sm text-gray-600" data-text="feature-actors-desc">Avatares realistas que hablan español nativo y representan el mercado mexicano</p>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl">
+                            <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
+                                🏠
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-2" data-text="feature-tours">Tours Virtuales con Personas</h4>
+                            <p class="text-sm text-gray-600" data-text="feature-tours-desc">Añade personas reales caminando por las propiedades para mostrar escala y ambiente</p>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl">
+                            <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
+                                ✂️
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-2" data-text="feature-removal">Object Removal Inteligente</h4>
+                            <p class="text-sm text-gray-600" data-text="feature-removal-desc">Elimina muebles viejos, objetos personales y distracciones automáticamente</p>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-xl">
+                            <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-4">
+                                🎯
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-2" data-text="feature-targeting">Scripts para Brokers</h4>
+                            <p class="text-sm text-gray-600" data-text="feature-targeting-desc">Templates optimizados para diferentes tipos de propiedades y audiencias</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROI Calculator -->
+                <div class="feature-card bg-gradient-to-br from-yellow-50 to-orange-100 p-8 rounded-2xl">
+                    <h4 class="text-xl font-bold text-gray-900 mb-6" data-text="roi-calculator">Calculadora ROI</h4>
+
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" data-text="monthly-listings">Propiedades por mes:</label>
+                            <input type="number" id="listings" value="10" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500">
+                        </div>
+
+                        <div class="bg-white p-4 rounded-lg">
+                            <h5 class="font-semibold text-gray-900 mb-3" data-text="traditional-costs">Método Tradicional:</h5>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between">
+                                    <span data-text="video-production">Producción video:</span>
+                                    <span class="font-semibold text-red-600">$2,500 MXN</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span data-text="photographer">Fotógrafo:</span>
+                                    <span class="font-semibold text-red-600">$800 MXN</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span data-text="staging">Staging:</span>
+                                    <span class="font-semibold text-red-600">$1,200 MXN</span>
+                                </div>
+                                <hr>
+                                <div class="flex justify-between font-bold">
+                                    <span data-text="monthly-total">Total mensual:</span>
+                                    <span class="text-red-600" id="traditional-cost">$45,000 MXN</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-lime-50 p-4 rounded-lg border-2 border-lime-200">
+                            <h5 class="font-semibold text-lime-800 mb-3" data-text="agente-raiz">Con Agente Raíz:</h5>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between">
+                                    <span data-text="subscription">Suscripción:</span>
+                                    <span class="font-semibold text-lime-700">$1,499 MXN</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span data-text="unlimited-videos">Videos ilimitados:</span>
+                                    <span class="font-semibold text-lime-700">$0 MXN</span>
+                                </div>
+                                <hr>
+                                <div class="flex justify-between font-bold">
+                                    <span data-text="monthly-total">Total mensual:</span>
+                                    <span class="text-lime-700">$1,499 MXN</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-green-100 p-4 rounded-lg text-center">
+                            <p class="font-bold text-green-800 text-lg" data-text="savings">Ahorro mensual:</p>
+                            <p class="text-2xl font-bold text-green-600" id="savings-amount">$43,501 MXN</p>
+                            <p class="text-sm text-green-700" data-text="roi-percentage">ROI: 2,903%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section 2 - Intelligent Communication -->
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -137,13 +387,12 @@
                         🤖 Tecnología de Vanguardia
                     </div>
                     <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        Filtro de Conversión Inteligente
+                        <span data-text="intelligent-filter-title">Filtro de Conversión Inteligente</span>
                     </h3>
                     <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                        Nuestro sistema de inteligencia artificial filtra automáticamente los leads de WhatsApp,
-                        calificando su potencial de compra antes de que lleguen a tu equipo.
-                        <strong class="text-blue-600">Solo hablas con compradores serios</strong>,
-                        maximizando tu tiempo y aumentando tu tasa de conversión.
+                        <span data-text="intelligent-filter-desc">Nuestro sistema de inteligencia artificial filtra automáticamente los leads de WhatsApp, calificando su potencial de compra antes de que lleguen a tu equipo.</span>
+                        <strong class="text-blue-600" data-text="intelligent-filter-highlight">Solo hablas con compradores serios</strong>,
+                        <span data-text="intelligent-filter-benefit">maximizando tu tiempo y aumentando tu tasa de conversión.</span>
                     </p>
                     <div class="space-y-4">
                         <div class="flex items-center gap-3">
@@ -152,7 +401,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                 </svg>
                             </div>
-                            <span class="text-lg text-gray-700">Calificación automática de leads 24/7</span>
+                            <span class="text-lg text-gray-700" data-text="feature-qualification">Calificación automática de leads 24/7</span>
                         </div>
                         <div class="flex items-center gap-3">
                             <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
@@ -160,7 +409,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                 </svg>
                             </div>
-                            <span class="text-lg text-gray-700">Integración directa con WhatsApp Business</span>
+                            <span class="text-lg text-gray-700" data-text="feature-whatsapp">Integración directa con WhatsApp Business</span>
                         </div>
                         <div class="flex items-center gap-3">
                             <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
@@ -168,7 +417,15 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                 </svg>
                             </div>
-                            <span class="text-lg text-gray-700">Aumenta conversiones hasta 300%</span>
+                            <span class="text-lg text-gray-700" data-text="feature-conversion">Aumenta conversiones hasta 300%</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="text-lg text-gray-700" data-text="feature-broker-dashboard">Dashboard especializado para brokers</span>
                         </div>
                     </div>
                 </div>
@@ -202,52 +459,76 @@
         </div>
     </section>
 
-    <!-- Feature Section 2 - Visual Enhancement -->
+    <!-- Feature Section 3 - AI Visual Suite -->
     <section class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="order-2 lg:order-1">
                     <div class="feature-card bg-gradient-to-br from-purple-50 to-pink-100 p-8 rounded-2xl">
-                        <h4 class="text-center text-lg font-semibold text-gray-700 mb-6">Transformación Visual con I.A.</h4>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <p class="text-sm text-gray-600 mb-2 font-medium">ANTES</p>
-                                <div class="before-after-slider rounded-lg overflow-hidden">
-                                    <img src="https://placehold.co/400x300/e0e0e0/505050?text=IMAGEN+ORIGINAL"
-                                         alt="Imagen original"
-                                         class="w-full h-48 object-cover">
+                        <h4 class="text-center text-lg font-semibold text-gray-700 mb-6" data-text="visual-transformation">Transformación Visual Completa</h4>
+
+                        <!-- Process Flow -->
+                        <div class="space-y-4">
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-red-500">
+                                <div class="flex items-center gap-3">
+                                    <span class="w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-900" data-text="step-upload">Sube tu foto/video</h5>
+                                        <p class="text-sm text-gray-600" data-text="step-upload-desc">Cualquier formato, cualquier calidad</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div>
-                                <p class="text-sm text-lime-600 mb-2 font-medium">DESPUÉS</p>
-                                <div class="before-after-slider rounded-lg overflow-hidden">
-                                    <img src="https://placehold.co/400x300/3b82f6/ffffff?text=PRESENTACION+4K"
-                                         alt="Presentación 4K mejorada"
-                                         class="w-full h-48 object-cover floating-animation">
+
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-orange-500">
+                                <div class="flex items-center gap-3">
+                                    <span class="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-900" data-text="step-ai">IA procesa automáticamente</h5>
+                                        <p class="text-sm text-gray-600" data-text="step-ai-desc">Object removal + Virtual staging + Mejora 4K</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-white p-4 rounded-lg border-l-4 border-green-500">
+                                <div class="flex items-center gap-3">
+                                    <span class="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center text-sm font-bold">3</span>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-900" data-text="step-people">Añade personas (opcional)</h5>
+                                        <p class="text-sm text-gray-600" data-text="step-people-desc">Familias mexicanas realistas en la propiedad</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gradient-to-r from-lime-50 to-green-50 p-4 rounded-lg border-2 border-lime-200">
+                                <div class="flex items-center gap-3">
+                                    <span class="w-8 h-8 bg-lime-500 text-white rounded-full flex items-center justify-center text-sm font-bold">✓</span>
+                                    <div>
+                                        <h5 class="font-semibold text-lime-800" data-text="step-result">Resultado profesional</h5>
+                                        <p class="text-sm text-lime-700" data-text="step-result-desc">Listo para MLS, redes sociales y presentaciones</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="mt-6 bg-white p-4 rounded-lg">
-                            <div class="flex items-center gap-2 text-sm text-gray-600">
-                                <span class="w-2 h-2 bg-lime-500 rounded-full"></span>
-                                Mejora automática en 30 segundos
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-gray-600" data-text="processing-time">Tiempo total de procesamiento:</span>
+                                <span class="font-bold text-lime-600" data-text="processing-duration">15-30 segundos</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="order-1 lg:order-2">
                     <div class="inline-flex items-center gap-2 bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                        ✨ Inteligencia Artificial
+                        ✨ <span data-text="ai-badge">Suite AI Visual Completa</span>
                     </div>
                     <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        Motor de Mejora Visual con I.A.
+                        <span data-text="visual-suite-title">Todo lo que Necesitas en Una Plataforma</span>
                     </h3>
                     <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                        Transforma tus fotos y videos estándar en
-                        <strong class="text-purple-600">impactantes presentaciones 4K</strong>
-                        que cautivan a tus clientes. Nuestro motor de I.A. optimiza automáticamente
-                        iluminación, colores y composición, específicamente calibrado para
-                        inmuebles de alto valor en México.
+                        <span data-text="visual-suite-desc1">Combina virtual staging, object removal, mejora de imágenes 4K, y inserción de personas reales en</span>
+                        <strong class="text-purple-600" data-text="visual-suite-highlight">una sola herramienta poderosa</strong>.
+                        <span data-text="visual-suite-desc2">Diseñada específicamente para el mercado inmobiliario mexicano y optimizada para propiedades de alto valor.</span>
                     </p>
                     <div class="space-y-4">
                         <div class="flex items-center gap-3">
@@ -256,7 +537,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                 </svg>
                             </div>
-                            <span class="text-lg text-gray-700">Mejora automática de iluminación y colores</span>
+                            <span class="text-lg text-gray-700" data-text="feature-staging">Virtual Staging: $0.50/imagen (vs $1 competencia)</span>
                         </div>
                         <div class="flex items-center gap-3">
                             <div class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center">
@@ -264,7 +545,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                 </svg>
                             </div>
-                            <span class="text-lg text-gray-700">Optimización para redes sociales y portales</span>
+                            <span class="text-lg text-gray-700" data-text="feature-people-insertion">Inserción de personas reales en tours virtuales</span>
                         </div>
                         <div class="flex items-center gap-3">
                             <div class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center">
@@ -272,7 +553,15 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                 </svg>
                             </div>
-                            <span class="text-lg text-gray-700">Aumenta engagement hasta 250%</span>
+                            <span class="text-lg text-gray-700" data-text="feature-object-removal">Object removal automático en 15 segundos</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="text-lg text-gray-700" data-text="feature-4k-enhancement">Mejora automática a resolución 4K</span>
                         </div>
                     </div>
                 </div>
@@ -285,12 +574,22 @@
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                    Solicita tu Demo Gratuito
+                    <span data-text="contact-title">Demo Exclusivo para Brokers</span>
                 </h3>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Descubre cómo Agente Raíz puede transformar tu agencia inmobiliaria.
-                    Sin compromisos, sin costo inicial.
+                    <span data-text="contact-subtitle">Descubre cómo aumentar tus ventas 300% y reducir costos 70%. Demostración personalizada para tu inmobiliaria.</span>
                 </p>
+
+                <!-- Pricing Preview -->
+                <div class="flex justify-center gap-4 mt-6">
+                    <div class="bg-blue-100 px-4 py-2 rounded-full">
+                        <span class="text-blue-800 font-semibold" data-text="price-basic">Plan Broker: $1,499/mes</span>
+                    </div>
+                    <div class="bg-purple-100 px-4 py-2 rounded-full">
+                        <span class="text-purple-800 font-semibold" data-text="price-enterprise">Plan Inmobiliaria: $3,999/mes</span>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-500 mt-2" data-text="pricing-note">50% descuento los primeros 3 meses para brokers nuevos</p>
             </div>
 
             <div class="bg-gray-50 rounded-2xl p-8 md:p-12">
@@ -298,49 +597,81 @@
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label for="nombre" class="block text-sm font-semibold text-gray-700 mb-2">
-                                Nombre Completo *
+                                <span data-text="form-name">Nombre Completo *</span>
                             </label>
                             <input type="text"
                                    id="nombre"
                                    name="nombre"
                                    required
                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                                   placeholder="Tu nombre completo">
+                                   data-placeholder="Tu nombre completo">
                         </div>
                         <div>
+                            <label for="cargo" class="block text-sm font-semibold text-gray-700 mb-2">
+                                <span data-text="form-role">Cargo/Posición *</span>
+                            </label>
+                            <select id="cargo"
+                                   name="cargo"
+                                   required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
+                                <option value="" data-text="select-role">Selecciona tu cargo</option>
+                                <option value="broker" data-text="role-broker">Broker/Corredor</option>
+                                <option value="manager" data-text="role-manager">Manager/Gerente</option>
+                                <option value="director" data-text="role-director">Director Inmobiliario</option>
+                                <option value="owner" data-text="role-owner">Dueño de Inmobiliaria</option>
+                                <option value="agent" data-text="role-agent">Agente de Ventas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
                             <label for="agencia" class="block text-sm font-semibold text-gray-700 mb-2">
-                                Agencia Inmobiliaria *
+                                <span data-text="form-company">Inmobiliaria/Empresa *</span>
                             </label>
                             <input type="text"
                                    id="agencia"
                                    name="agencia"
                                    required
                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                                   placeholder="Nombre de tu agencia">
+                                   data-placeholder="Nombre de tu inmobiliaria">
+                        </div>
+                        <div>
+                            <label for="propiedades" class="block text-sm font-semibold text-gray-700 mb-2">
+                                <span data-text="form-properties">Propiedades/Mes</span>
+                            </label>
+                            <select id="propiedades"
+                                   name="propiedades"
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
+                                <option value="1-5" data-text="properties-1-5">1-5 propiedades</option>
+                                <option value="6-15" data-text="properties-6-15">6-15 propiedades</option>
+                                <option value="16-30" data-text="properties-16-30">16-30 propiedades</option>
+                                <option value="31+" data-text="properties-31+">31+ propiedades</option>
+                            </select>
                         </div>
                     </div>
                     <div>
                         <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
-                            Correo Electrónico *
+                            <span data-text="form-email">Correo Electrónico *</span>
                         </label>
                         <input type="email"
                                id="email"
                                name="email"
                                required
                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                               placeholder="tu@agencia.com">
+                               data-placeholder="tu@inmobiliaria.com">
                     </div>
                     <div class="text-center">
                         <button type="submit"
                                 class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105">
-                            Solicitar Demo Gratuito
+                            <span data-text="form-submit">Solicitar Demo Exclusivo para Brokers</span>
                         </button>
+                        <p class="text-sm text-gray-500 mt-3" data-text="form-privacy">100% confidencial. Demostración personalizada en 24 horas.</p>
                     </div>
                 </form>
 
                 <div id="formMessage" class="mt-6 text-center hidden">
                     <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg">
-                        ¡Gracias! Te contactaremos pronto para programar tu demo.
+                        <span data-text="form-success">¡Perfecto! Un especialista en soluciones para brokers te contactará en las próximas 2 horas para programar tu demo personalizado.</span>
                     </div>
                 </div>
             </div>
@@ -359,15 +690,16 @@
                         <h4 class="text-2xl font-bold">Agente Raíz</h4>
                     </div>
                     <p class="text-gray-400">
-                        La plataforma inteligente que revoluciona el mercado inmobiliario mexicano.
+                        <span data-text="footer-description">La plataforma TODO-EN-UNO que combina videos UGC, virtual staging y AI para brokers mexicanos.</span>
                     </p>
                 </div>
                 <div>
-                    <h5 class="text-lg font-semibold mb-4">Contacto</h5>
+                    <h5 class="text-lg font-semibold mb-4" data-text="footer-contact">Contacto Brokers</h5>
                     <div class="space-y-2 text-gray-400">
-                        <p>📧 info@agenteraiz.mx</p>
+                        <p>📧 brokers@agenteraiz.mx</p>
                         <p>📱 +52 55 1234 5678</p>
-                        <p>📍 Ciudad de México, México</p>
+                        <p>📍 <span data-text="footer-location">Ciudad de México, México</span></p>
+                        <p>🕰️ <span data-text="footer-support">Soporte 24/7 para clientes</span></p>
                     </div>
                 </div>
                 <div>
@@ -391,8 +723,18 @@
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 Agente Raíz. Todos los derechos reservados. Hecho con ❤️ para el mercado inmobiliario mexicano.</p>
+            <div class="border-t border-gray-800 mt-8 pt-8">
+                <div class="grid md:grid-cols-2 gap-4 items-center">
+                    <div class="text-gray-400 text-sm">
+                        <p>&copy; 2024 Agente Raíz. <span data-text="footer-rights">Todos los derechos reservados.</span></p>
+                        <p class="mt-1"><span data-text="footer-made">Hecho con ❤️ para brokers e inmobiliarias mexicanas.</span></p>
+                    </div>
+                    <div class="text-right text-gray-400 text-sm">
+                        <p class="font-semibold" data-text="footer-competitive">Vs Competencia Internacional:</p>
+                        <p>Arcads: $99/mes → <span class="text-lime-400 font-bold">Nosotros: $49/mes</span></p>
+                        <p>Virtual Staging AI: Solo inglés → <span class="text-lime-400 font-bold">Nosotros: Español nativo</span></p>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
@@ -407,33 +749,167 @@
     </a>
 
     <script>
-        // Form submission handling
+        // Translation system
+        const translations = {
+            es: {
+                'contact-whatsapp': 'Contáctanos en WhatsApp',
+                'target-brokers': 'Brokers',
+                'target-managers': 'Managers',
+                'target-agencies': 'Inmobiliarias',
+                'hero-title-1': 'Impulsa tus Ventas.',
+                'hero-title-2': 'Maximiza tu Cartera.',
+                'hero-subtitle': 'La única plataforma TODO-EN-UNO que combina videos UGC, virtual staging, object removal y AI avatars. Diseñada específicamente para brokers e inmobiliarias en México.',
+                'roi-time': 'Ahorra 80% Tiempo',
+                'roi-sales': '+300% Ventas',
+                'roi-cost': '-70% Costos',
+                'cta-demo': 'Demo Gratuito para Brokers',
+                'cta-pricing': 'Ver Precios Especiales',
+                'competitive-note': 'Vs competencia internacional:',
+                'feature-ugc-badge': 'Videos UGC en 2 Minutos',
+                'ugc-title': 'Crea Videos UGC Profesionales',
+                'ugc-subtitle': 'Genera videos con actores AI reales mostrando propiedades, testimoniales de clientes, y tours virtuales. Sin contratar videógrafos, sin sets de grabación.',
+                'form-name': 'Nombre Completo *',
+                'form-role': 'Cargo/Posición *',
+                'form-company': 'Inmobiliaria/Empresa *',
+                'form-properties': 'Propiedades/Mes',
+                'form-email': 'Correo Electrónico *',
+                'form-submit': 'Solicitar Demo Exclusivo para Brokers',
+                'form-privacy': '100% confidencial. Demostración personalizada en 24 horas.',
+                'form-success': '¡Perfecto! Un especialista en soluciones para brokers te contactará en las próximas 2 horas para programar tu demo personalizado.'
+            },
+            en: {
+                'contact-whatsapp': 'Contact us on WhatsApp',
+                'target-brokers': 'Brokers',
+                'target-managers': 'Managers',
+                'target-agencies': 'Real Estate Agencies',
+                'hero-title-1': 'Boost Your Sales.',
+                'hero-title-2': 'Maximize Your Portfolio.',
+                'hero-subtitle': 'The only ALL-IN-ONE platform combining UGC videos, virtual staging, object removal and AI avatars. Specifically designed for brokers and real estate agencies in Mexico.',
+                'roi-time': 'Save 80% Time',
+                'roi-sales': '+300% Sales',
+                'roi-cost': '-70% Costs',
+                'cta-demo': 'Free Demo for Brokers',
+                'cta-pricing': 'See Special Pricing',
+                'competitive-note': 'Vs international competition:',
+                'feature-ugc-badge': 'UGC Videos in 2 Minutes',
+                'ugc-title': 'Create Professional UGC Videos',
+                'ugc-subtitle': 'Generate videos with real AI actors showing properties, client testimonials, and virtual tours. No videographers, no recording sets needed.',
+                'form-name': 'Full Name *',
+                'form-role': 'Role/Position *',
+                'form-company': 'Real Estate Company *',
+                'form-properties': 'Properties/Month',
+                'form-email': 'Email Address *',
+                'form-submit': 'Request Exclusive Demo for Brokers',
+                'form-privacy': '100% confidential. Personalized demo within 24 hours.',
+                'form-success': 'Perfect! A specialist in broker solutions will contact you within 2 hours to schedule your personalized demo.'
+            }
+        };
+
+        let currentLanguage = 'es';
+
+        // Language toggle functionality
+        function initLanguageToggle() {
+            const languageOptions = document.querySelectorAll('.language-option');
+
+            languageOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const newLang = this.dataset.lang;
+                    if (newLang !== currentLanguage) {
+                        // Update active state
+                        languageOptions.forEach(opt => opt.classList.remove('active'));
+                        this.classList.add('active');
+
+                        // Switch language
+                        switchLanguage(newLang);
+                        currentLanguage = newLang;
+
+                        // Update HTML lang attribute
+                        document.getElementById('html-root').setAttribute('lang', newLang);
+                    }
+                });
+            });
+        }
+
+        // Switch language function
+        function switchLanguage(lang) {
+            const elements = document.querySelectorAll('[data-text]');
+
+            elements.forEach(element => {
+                const key = element.dataset.text;
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            // Update placeholders
+            const placeholderElements = document.querySelectorAll('[data-placeholder]');
+            placeholderElements.forEach(element => {
+                const key = element.dataset.placeholder;
+                if (translations[lang] && translations[lang][key]) {
+                    element.placeholder = translations[lang][key];
+                }
+            });
+        }
+
+        // ROI Calculator
+        function initROICalculator() {
+            const listingsInput = document.getElementById('listings');
+            const traditionalCostElement = document.getElementById('traditional-cost');
+            const savingsElement = document.getElementById('savings-amount');
+
+            function calculateROI() {
+                const listings = parseInt(listingsInput.value) || 10;
+                const costPerListing = 4500; // MXN (video + photo + staging)
+                const traditionalTotal = listings * costPerListing;
+                const agentRaizCost = 1499; // MXN monthly
+                const savings = traditionalTotal - agentRaizCost;
+
+                traditionalCostElement.textContent = `$${traditionalTotal.toLocaleString()} MXN`;
+                savingsElement.textContent = `$${savings.toLocaleString()} MXN`;
+            }
+
+            if (listingsInput) {
+                listingsInput.addEventListener('input', calculateROI);
+                calculateROI(); // Initial calculation
+            }
+        }
+
+        // Enhanced form submission handling
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
 
             // Get form data
             const formData = new FormData(this);
             const nombre = formData.get('nombre');
+            const cargo = formData.get('cargo');
             const agencia = formData.get('agencia');
+            const propiedades = formData.get('propiedades');
             const email = formData.get('email');
 
-            // Basic validation
-            if (!nombre || !agencia || !email) {
-                alert('Por favor, completa todos los campos obligatorios.');
+            // Enhanced validation
+            if (!nombre || !cargo || !agencia || !email) {
+                const message = currentLanguage === 'es'
+                    ? 'Por favor, completa todos los campos obligatorios.'
+                    : 'Please complete all required fields.';
+                alert(message);
                 return;
             }
 
             // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
-                alert('Por favor, ingresa un correo electrónico válido.');
+                const message = currentLanguage === 'es'
+                    ? 'Por favor, ingresa un correo electrónico válido.'
+                    : 'Please enter a valid email address.';
+                alert(message);
                 return;
             }
 
             // Simulate form submission
             const submitButton = this.querySelector('button[type="submit"]');
             const originalText = submitButton.textContent;
-            submitButton.textContent = 'Enviando...';
+            const loadingText = currentLanguage === 'es' ? 'Enviando...' : 'Sending...';
+            submitButton.textContent = loadingText;
             submitButton.disabled = true;
 
             // Simulate API call
@@ -444,16 +920,25 @@
                 submitButton.textContent = originalText;
                 submitButton.disabled = false;
 
-                // Open WhatsApp with pre-filled message
-                const whatsappMessage = `Hola, soy ${nombre} de ${agencia}. Acabo de solicitar un demo de Agente Raíz desde su sitio web. Mi correo es ${email}. ¿Podrían contactarme para programar una demostración?`;
+                // Enhanced WhatsApp message for brokers
+                const whatsappMessage = currentLanguage === 'es'
+                    ? `Hola, soy ${nombre}, ${cargo} de ${agencia}. Manejamos ${propiedades} propiedades/mes. Quiero solicitar un demo de Agente Raíz para aumentar nuestras ventas 300%. Mi correo: ${email}`
+                    : `Hi, I'm ${nombre}, ${cargo} at ${agencia}. We handle ${propiedades} properties/month. I want to request an Agente Raíz demo to increase our sales by 300%. My email: ${email}`;
+
                 const whatsappUrl = `https://wa.me/525512345678?text=${encodeURIComponent(whatsappMessage)}`;
                 window.open(whatsappUrl, '_blank');
 
-                // Hide success message after 5 seconds
+                // Hide success message after 8 seconds
                 setTimeout(() => {
                     document.getElementById('formMessage').classList.add('hidden');
-                }, 5000);
-            }, 1500);
+                }, 8000);
+            }, 2000);
+        });
+
+        // Initialize all functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            initLanguageToggle();
+            initROICalculator();
         });
 
         // Smooth scrolling for anchor links
@@ -470,26 +955,62 @@
             });
         });
 
-        // Add scroll effect to header
+        // Enhanced scroll effect for header
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
-                header.classList.add('shadow-lg');
+                header.classList.add('shadow-lg', 'backdrop-blur-sm');
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
             } else {
-                header.classList.remove('shadow-lg');
+                header.classList.remove('shadow-lg', 'backdrop-blur-sm');
+                header.style.backgroundColor = 'white';
             }
         });
 
-        // WhatsApp tracking (optional analytics)
+        // Enhanced WhatsApp tracking with broker context
         document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
             link.addEventListener('click', function() {
                 // Track WhatsApp clicks for analytics
                 if (typeof gtag !== 'undefined') {
                     gtag('event', 'whatsapp_click', {
-                        'event_category': 'engagement',
-                        'event_label': 'whatsapp_contact'
+                        'event_category': 'broker_engagement',
+                        'event_label': 'whatsapp_contact',
+                        'value': 1
                     });
                 }
+
+                // Track language preference
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'language_preference', {
+                        'event_category': 'user_behavior',
+                        'event_label': currentLanguage
+                    });
+                }
+            });
+        });
+
+        // Video preview interaction
+        document.querySelectorAll('.play-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const preview = this.closest('.video-preview');
+                preview.innerHTML = `
+                    <div class="bg-blue-50 p-8 text-center rounded-lg">
+                        <div class="animate-spin w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full mx-auto mb-4"></div>
+                        <p class="text-blue-700 font-medium">${currentLanguage === 'es' ? 'Cargando demo...' : 'Loading demo...'}</p>
+                        <p class="text-sm text-blue-600 mt-2">${currentLanguage === 'es' ? 'Video generado con actores AI mexicanos' : 'Video generated with Mexican AI actors'}</p>
+                    </div>
+                `;
+
+                // Simulate video loading
+                setTimeout(() => {
+                    preview.innerHTML = `
+                        <div class="bg-green-50 p-8 text-center rounded-lg border-2 border-green-200">
+                            <div class="text-4xl mb-4">✓</div>
+                            <p class="text-green-700 font-bold">${currentLanguage === 'es' ? 'Demo disponible en la presentación' : 'Demo available in presentation'}</p>
+                            <p class="text-sm text-green-600 mt-2">${currentLanguage === 'es' ? 'Solicita tu demo personalizado abajo' : 'Request your personalized demo below'}</p>
+                        </div>
+                    `;
+                }, 2000);
             });
         });
 
@@ -504,12 +1025,17 @@
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
+
+                    // Add special animation for broker targeting badges
+                    if (entry.target.classList.contains('broker-targeting')) {
+                        entry.target.style.animation = 'pulse 2s infinite';
+                    }
                 }
             });
         }, observerOptions);
 
-        // Observe all feature cards
-        document.querySelectorAll('.feature-card').forEach(card => {
+        // Observe all feature cards and broker elements
+        document.querySelectorAll('.feature-card, .broker-targeting').forEach(card => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(20px)';
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
